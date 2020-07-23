@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
+
 <body class="page-body">
   <header class="page-header">
     <div class="page-header__wrap">
@@ -29,6 +31,138 @@
     </div>
   </header>
   <main class="main-page">
+    <section class="main-page__recall recall">
+      <h2 class="recall__title">
+        Оставте свой отзыв
+      </h2>
+      <p class="recall__description">
+        помогите нашим отелям стать лучше! оставьте отзыв о них,а также о посещенных вами достопримечательностях
+      </p>
+      <form action="https://echo.htmlacademy.ru" class="recall__form form">
+        <fieldset class="form__wrap">
+          <div class="form__introduce introduce">
+            <h3 class="introduce__title">
+              представтесть:
+            </h3>
+            <label class="introduce__name" for="name">
+              имя*:
+              <input class="introduce__input-name" id="name" type="text" placeholder="Пётр">
+            </label>
+            <label class="introduce__family" for="family">
+              фамилия*:
+            </label>
+            <input class="introduce__input-family" id="family" type="text" placeholder="Иванов">
+            <label class="introduce__patronymic" for="patronymic">
+              отчество*:
+            </label>
+            <input class="introduce__input-patronymic" id="patronymic" type="text" placeholder="Александрович">
+          </div>
+          <div class="form__сontact сontact">
+            <h3 class="сontact__title">
+              контактная информация:
+            </h3>
+            
+            
+            <label class="сontact__phone" for="phone">
+              контактный телефон*:
+            </label>
+            <input class="сontact__input-phone" id="phone" type="text" placeholder="Введите телефон">
+            
+            
+            <label class="сontact__email" for="email">
+              контактный телефон*:
+            </label>
+            <input class="сontact__input-email" id="email" type="text" placeholder="Введите e-mail">
+          </div>
+          <div class="form__impression impression">
+            <h3 class="impression__title">
+              ваше общее впечатление:
+            </h3>
+            <ul class="impression__list">
+              <li class="impression__item">
+                <label class="impression__radio-text" for="radio1">
+                  Скорее положительное
+                </label>
+                <input class="impression__radio" id="radio1" type="radio" name="general-impression"
+                  value="скорее положительное">
+              </li>
+              <li class="impression__item">
+                <label class="impression__radio-text" for="radio2">
+                  Скорее отрицательное
+                </label>
+                <input class="impression__radio" id="radio2" type="radio" name="general-impression"
+                  value="скорее отрицательное">
+              </li>
+              <li class="impression__item">
+                <label class="impression__radio-text" for="radio3">
+                  Затрудняюсь ответить
+                </label>
+                <input class="impression__radio" id="radio3" type="radio" name="general-impression"
+                  value="затрудняюсь ответить">
+              </li>
+            </ul>
+          </div>
+          <div class="form__attractions attractions">
+            <h3 class="attractions__title">
+              посещенные достопримечательности:
+            </h3>
+            <ul class="attractions__list">
+              <li class="attractions__item">
+                <label class="attractions__check-text" for="check1">
+                  Мост Дьявола
+                </label>
+                <input class="attractions__check" type="checkbox" id="check1" name="visited-attractions"
+                  value="Мост дьявола" checked>
+              </li>
+              <li class="attractions__item">
+                <label class="attractions__check-text" for="check2">
+                  Гора-Колокол
+                </label>
+                <input class="attractions__check" type="checkbox" id="check2" name="visited-attractions"
+                  value="Гора-Колокол" checked>
+              </li>
+              <li class="attractions__item">
+                <label class="attractions__check-text" for="check3">
+                  Слайд-парк
+                </label>
+                <input class="attractions__check" type="checkbox" id="check3" name="visited-attractions"
+                  value="Слайд-парк" checked>
+              </li>
+              <li class="attractions__item">
+                <label class="attractions__check-text" for="check4">
+                  Красные скалы
+                </label>
+                <input class="attractions__check" type="checkbox" id="check4" name="visited-attractions"
+                  value="Красные скалы">
+              </li>
+            </ul>
+          </div>
+          <div class="form__emotion emotion">
+            <textarea class="emotion__review" name="emotion" cols="30" rows="10">Опишите подробно все свои восторги
+           </textarea>
+          </div>
+          <button class="form__btn">отправить отзыв</button>
+        </fieldset>
+      </form>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </main>
   <footer class="main-footer">
     <p class="main-footer__tag">#visitsedona</p>
@@ -57,4 +191,5 @@
     </div>
   </footer>
 </body>
+
 </html>
