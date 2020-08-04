@@ -1,9 +1,9 @@
 .page-header__wrap {
-  width: 330px;
-  min-height: 254px;
-  background-color:#ffffff;;
-  margin: 0px auto;
-  padding: 5px;
+  width: 320px;
+  min-height: 260px;
+  background-color: #ffffff;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   position: relative;
@@ -11,8 +11,8 @@
 
 .page-header__list-navigation {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,32 +23,32 @@
 .list-navigation__item {
   display: flex;
   justify-content: center;
-  background-color: #81B3D2;
+  background-color: #81b3d2;
   text-align: center;
   border-bottom: 1px solid #6490ab;
-  margin: 0px;
-  padding: 0px;
-  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .list-navigation__links {
-  padding: 5px 0px;
+  padding: 5px 0;
   text-decoration: none;
   color: #ffffff;
-  font-family:"PTSans","Arial";
-  font-style: normal;
+  font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
-   
 }
 
 .list-navigation__btn_close {
   position: relative;
-  &::before{
-    content:"";
+
+  &::before {
+    content: "";
     position: absolute;
-    background:url(/source/img/icon-btn-menu-close.svg) no-repeat  ;
+    background: url("/img/icon-btn-menu-close.svg") no-repeat;
     width: 23px;
     height: 23px;
     top: 13px;
@@ -59,14 +59,15 @@
 .page-header__logo {
   margin: 0 auto;
   position: absolute;
-  top: 209px;
+  top: 204px;
   left: 116px;
+  z-index: 1;
 }
 
 .page-heder__icon-menu {
   position: absolute;
-  background: url(/source/img/icon-menu-mobile.svg) no-repeat center center;
-  top: 225px;
+  background: url("/img/icon-menu-mobile.svg") no-repeat center center;
+  top: 222px;
   right: 19px;
   width: 23px;
   height: 23px;
