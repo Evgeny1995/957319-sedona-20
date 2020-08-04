@@ -1,0 +1,96 @@
+.main-page__view {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
+  background-color: #ffffff;
+  padding: 158px 0 1px 0;
+  background-position: -224px -231px;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("/img/Export/SEDONA-signature-photo-bg.svg") no-repeat;
+    width: 229px;
+    height: 39px;
+    top: 50px;
+    left: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/img/Export/mobile-triangle-bg-2.svg") no-repeat;
+    width: 320px;
+    height: 57px;
+    top: 113px;
+    right: 0;
+  }
+}
+
+.view__title {
+  font-family: "PTSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 37px 0 40px 0;
+}
+
+.view__description {
+  width: 92%;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 auto 37px auto;
+}
+
+.view-list {
+  list-style: none;
+  border-top: 1px solid #e5e5e5;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.view-list__item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 20px 0;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.view-list__title {
+  font-weight: bold;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+
+.view-list__author-photo {
+  margin: 13px 0 0 0;
+  padding: 0;
+}
+
+.view-list__btn {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  padding: 0 0 10px 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("/img/Export/like-icon.svg.svg") no-repeat;
+    width: 23px;
+    height: 21px;
+    top: 0;
+    left: 0;
+  }
+}
