@@ -1,3 +1,7 @@
+body {
+  margin: 0 auto;
+}
+
 .main-page__view {
   position: relative;
   width: 320px;
@@ -15,7 +19,7 @@
     width: 229px;
     height: 39px;
     top: 50px;
-    left: 50px;
+    left: 43px;
   }
 
   &::before {
@@ -51,7 +55,7 @@
 .view-list {
   list-style: none;
   border-top: 1px solid #e5e5e5;
-  padding: 0 20px;
+  padding: 0;
   margin: 0;
 }
 
@@ -69,28 +73,52 @@
 
 .view-list__title {
   font-weight: bold;
-  margin: 15px 0 0 0;
+  margin: 15px 20px 0 20px;
   padding: 0;
 }
 
 .view-list__author-photo {
-  margin: 13px 0 0 0;
+  margin: 13px 20px 0 20px;
   padding: 0;
 }
 
 .view-list__btn {
   font-weight: bold;
-  margin: 10px 0 0 0;
+  margin: 10px 20px 0 20px;
   padding: 0 0 10px 30px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    background: url("/img/Export/like-icon.svg.svg") no-repeat;
+    background: url("/img/Export/like-icon.svg") no-repeat;
     width: 23px;
     height: 21px;
     top: 0;
     left: 0;
   }
+}
+
+.view-list__picture-vastness {
+  width: 280px;
+  height: 280px;
+  margin: 0 20px;
+}
+
+.view-list__picture-plants {
+  width: 280px;
+  height: 280px;
+  margin: 0 20px;
+}
+
+.view-list__picture-road {
+  width: 280px;
+  height: 280px;
+  margin: 0 20px;
+}
+
+.view-list__picture-bridge {
+  width: 280px;
+  height: 280px;
+  margin: 0 20px;
 }
