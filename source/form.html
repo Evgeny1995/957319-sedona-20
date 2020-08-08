@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page-body">
@@ -11,131 +12,122 @@
     <div class="page-header__wrap">
       <ul class="page-header__list-navigation list-navigation ">
         <li class="list-navigation__item">
-          <a href="#" class="list-navigation__links">главная
-            <span class="list-navigation__btn_close">
-            </span>
+          <a href="http://localhost:3000" class="list-navigation__links">ГЛАВНАЯ
           </a>
+          <span class="list-navigation__btn_close"></span>
         </li>
         <li class="list-navigation__item">
-          <a href="#" class="list-navigation__links">фото и видео</a>
+          <a href="http://localhost:3000/photo.html" class="list-navigation__links">ФОТО И ВИДЕО</a>
         </li>
         <li class="list-navigation__item">
-          <a href="#" class="list-navigation__links">форма отзыва</a>
+          <a href="http://localhost:3000/form.html" class="list-navigation__links">ФОРМА ОТЗЫВА</a>
         </li>
-        <li class="list-navigation__item">
-          <a href="#" class="list-navigation__links">HTML ACADEMY</a>
+        <li class="list-navigation__item shadow">
+          <a href="https://htmlacademy.ru/study" class="list-navigation__links">HTML ACADEMY</a>
         </li>
       </ul>
-      <img class="page-header__logo" src="#" alt="Логотип">
+      <img class="page-header__logo" src="/img/logo-sedona-mobile.svg" alt="Логотип">
       <span class="page-heder__icon-menu"></span>
     </div>
   </header>
   <main class="main-page">
     <section class="main-page__recall recall">
       <h2 class="recall__title">
-        Оставте свой отзыв
+        ОСТАВЬТЕ СВОЙ ОТЗЫВ
       </h2>
       <p class="recall__description">
-        помогите нашим отелям стать лучше! оставьте отзыв о них,а также о посещенных вами достопримечательностях
-      </p>
+        ПОМОГИТЕ НАШИМ ОТЕЛЯМ СТАТЬ ЛУДШЕ! ОСТАВЬТЕ ОТЗЫВ О НИХ, А ТАКЖЕ О ПОСЕЩЕННЫХ ВАМИ ДОСТОПРИМЕЧАТЕЛЬНОСТЯХ</p>
       <form action="https://echo.htmlacademy.ru" class="recall__form form">
         <fieldset class="form__wrap">
           <div class="form__introduce introduce">
-            <h3 class="introduce__title">
-              представтесть:
-            </h3>
+            <h3 class="introduce__title">ПРЕДСТАВЬТЕСЬ:</h3>
             <label class="introduce__name" for="name">
-              имя*:
+              ИМЯ*:
               <input class="introduce__input-name" id="name" type="text" placeholder="Пётр" required>
             </label>
             <label class="introduce__family" for="family">
-              фамилия*:
+              ФАМИЛИЯ*:
             </label>
             <input class="introduce__input-family" id="family" type="text" placeholder="Иванов" required>
             <label class="introduce__patronymic" for="patronymic">
-              отчество*:
+              ОТЧЕСТВО*:
             </label>
             <input class="introduce__input-patronymic" id="patronymic" type="text" placeholder="Александрович" required>
           </div>
           <div class="form__сontact сontact">
-            <h3 class="сontact__title">
-              контактная информация:
-            </h3>
+            <h3 class="сontact__title">КОНТАКТНАЯ ИНФОРМАЦИЯ:</h3>
             <label class="сontact__phone" for="phone">
-              контактный телефон*:
+              КОНТАКТНЫЙ ТЕЛЕФОН*:
             </label>
             <input class="сontact__input-phone" id="phone" type="tel" placeholder="Введите телефон" required>
             <label class="сontact__email" for="email">
-              контактный телефон*:
+              ЭЛЕКТРОННАЯ ПОЧТА*:
             </label>
             <input class="сontact__input-email" id="email" type="email" placeholder="Введите e-mail" required>
           </div>
           <div class="form__impression impression">
             <h3 class="impression__title">
-              ваше общее впечатление:
+              ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:
             </h3>
             <ul class="impression__list">
               <li class="impression__item">
+                <input class="impression__radio" id="radio1" type="radio" name="general-impression" value="скорее положительное" checked>
                 <label class="impression__radio-text" for="radio1">
-                  Скорее положительное
+                  <span class="test">Скорее положительное</span>
                 </label>
-                <input class="impression__radio" id="radio1" type="radio" name="general-impression"
-                  value="скорее положительное">
               </li>
               <li class="impression__item">
+                <input class="impression__radio" id="radio2" type="radio" name="general-impression" value="скорее отрицательное">
                 <label class="impression__radio-text" for="radio2">
-                  Скорее отрицательное
+                  <span class="test">Скорее отрицательное</span>
                 </label>
-                <input class="impression__radio" id="radio2" type="radio" name="general-impression"
-                  value="скорее отрицательное">
               </li>
               <li class="impression__item">
-                <label class="impression__radio-text" for="radio3">
-                  Затрудняюсь ответить
+                <input class="impression__radio" id="radio3" type="radio" name="general-impression" value="затрудняюсь ответить">
+                <label class="impression__radio-text" for="radio3"><span class="test">Затрудняюсь ответить</span>
                 </label>
-                <input class="impression__radio" id="radio3" type="radio" name="general-impression"
-                  value="затрудняюсь ответить">
               </li>
             </ul>
           </div>
           <div class="form__attractions attractions">
             <h3 class="attractions__title">
-              посещенные достопримечательности:
+              ПОСЕЩЕННЫЕ ДОСТОПРЕМЕЧАТЕЛЬНОСТИ:
             </h3>
             <ul class="attractions__list">
               <li class="attractions__item">
+                <input class="attractions__check" type="checkbox" id="check1" name="visited-attractions"
+                  value="Мост дьявола" checked>
                 <label class="attractions__check-text" for="check1">
                   Мост Дьявола
                 </label>
-                <input class="attractions__check" type="checkbox" id="check1" name="visited-attractions"
-                  value="Мост дьявола" checked>
               </li>
               <li class="attractions__item">
+                <input class="attractions__check" type="checkbox" id="check2" name="visited-attractions"
+                  value="Гора-Колокол" checked>
                 <label class="attractions__check-text" for="check2">
                   Гора-Колокол
                 </label>
-                <input class="attractions__check" type="checkbox" id="check2" name="visited-attractions"
-                  value="Гора-Колокол" checked>
               </li>
               <li class="attractions__item">
+                <input class="attractions__check" type="checkbox" id="check3" name="visited-attractions"
+                  value="Слайд-парк" checked>
                 <label class="attractions__check-text" for="check3">
                   Слайд-парк
                 </label>
-                <input class="attractions__check" type="checkbox" id="check3" name="visited-attractions"
-                  value="Слайд-парк" checked>
               </li>
               <li class="attractions__item">
+                <input class="attractions__check" type="checkbox" id="check4" name="visited-attractions"
+                  value="Красные скалы">
                 <label class="attractions__check-text" for="check4">
                   Красные скалы
                 </label>
-                <input class="attractions__check" type="checkbox" id="check4" name="visited-attractions"
-                  value="Красные скалы">
               </li>
             </ul>
           </div>
           <div class="form__emotion emotion">
-            <textarea class="emotion__review" name="emotion" cols="30" rows="10">Опишите подробно все свои восторги
-           </textarea>
+            <h3 class="emotion__title">ОПИШИТЕ СВОИ ЭМОЦИИ</h3>
+            <textarea class="emotion__review" name="emotion" cols="30"
+              rows="10">Опишите подробно все свои восторги</textarea>
           </div>
           <button class="form__btn">отправить отзыв</button>
         </fieldset>
@@ -143,30 +135,31 @@
     </section>
   </main>
   <footer class="main-footer">
-    <p class="main-footer__tag">#visitsedona</p>
+    <p class="main-footer__tag">#VISITSEDONA</p>
     <ul class="main-footer__social-list social-list">
       <li class="social-list__social-item">
         <a class="social-list__link-twitter" href="#">
-          <img class="social-list__picture-twitter" src="#" alt="twitter">
+          <img class="social-list__picture-twitter" src="/img/Export/icon-twitter.svg" alt="twitter">
         </a>
       </li>
       <li class="social-list__social-item">
         <a class="social-list__link-facebook" href="#">
-          <img class="social-list__picture-facebook" src="#" alt="facebook">
+          <img class="social-list__picture-facebook" src="/img/Export/icon-facebook.svg" alt="facebook">
         </a>
       </li>
       <li class="social-list__social-item">
         <a class="social-list__link-youtube" href="#">
-          <img class="social-list__picture-youtube" src="#" alt="youtube">
+          <img class="social-list__picture-youtube" src="/img/Export/icon-youtube.svg" alt="youtube">
         </a>
       </li>
     </ul>
     <div class="main-footer__copyright copyright">
-      <p class="copyright__text">разработанно</p>
+      <p class="copyright__text">РАЗРАБОТАНО</p>
       <a class="copyright__link" href="#">
-        <img class="copyright__picture" src="#" alt="HTML Academy">
+        <img class="copyright__picture" src="/img/Export/htmlacademy-copyright.svg" alt="HTML Academy">
       </a>
     </div>
   </footer>
 </body>
+
 </html>
