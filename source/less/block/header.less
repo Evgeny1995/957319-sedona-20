@@ -17,6 +17,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,8 +33,7 @@
   border-bottom: 1px solid #6490ab;
   margin: 0;
   padding: 0;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .list-navigation__links {
@@ -68,6 +68,10 @@
   z-index: 1;
 }
 
+.logo {
+  border: none;
+}
+
 .page-heder__icon-menu {
   position: absolute;
   background: url("/img/icon-menu-mobile.svg") no-repeat center center;
@@ -75,4 +79,201 @@
   right: 19px;
   width: 23px;
   height: 23px;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    width: 768px;
+    min-height: 56px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header__wrap {
+    width: 693px;
+    min-height: 56px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0 37.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header__list-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0));
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__item {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    color: #000000;
+    padding: 0;
+    margin: 16px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__item:nth-child(1) {
+    margin: auto 81px auto 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__item:nth-child(2) {
+    margin: auto 23px auto 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__item:nth-child(4) {
+    margin: auto 0 auto 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__item:nth-child(5) {
+    margin: auto 0 auto 39px;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__links {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .list-navigation__btn_close {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-heder__icon-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 335px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header {
+    width: 1200px;
+    min-height: 56px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__wrap {
+    width: 1040px;
+    min-height: 56px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0 37.5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__list-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr 1.4fr 1fr;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0));
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__item {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    color: #000000;
+    padding: 0;
+    margin: 16px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__item:nth-child(1) {
+    margin: auto 149px auto 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__item:nth-child(2) {
+    margin: auto 94px auto 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__item:nth-child(4) {
+    margin: auto 0 auto 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__item:nth-child(5) {
+    margin: auto 0 auto 76px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__links {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-navigation__btn_close {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-heder__icon-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header__logo {
+    position: absolute;
+    width: 186.6px;
+    height: 96.43px;
+    top: 0;
+    left: 465px;
+  }
 }
