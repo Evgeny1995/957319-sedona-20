@@ -3,9 +3,9 @@
   min-height: 233px;
   background-color: #ffffff;
   color: #000000;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   text-align: center;
-  padding: 40px 0 1px 0;
+  padding: 80px 0 1px 0;
 }
 
 .main-footer__tag {
@@ -32,18 +32,72 @@
 }
 
 .social-list__link-twitter {
-  padding: 15px 15px;
+  padding: 14px 15px 16px 15px;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social-list__picture-twitter {
+  fill: #ffffff;
+  width: 17.5px;
+  height: 14.57px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__link-facebook {
   padding: 19px 19.5px 11px 19.5px;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social-list__picture-facebook {
+  fill: #ffffff;
+  width: 9px;
+  height: 19px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__link-youtube {
-  padding: 14px 14px 16px 14px;
+  padding: 15px 14px 15px 14px;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social-list__picture-youtube {
+  fill: #ffffff;
+  width: 20px;
+  height: 15px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright {
@@ -67,6 +121,17 @@
   padding: 0;
 }
 
+.copyright__picture {
+  fill: #000000;
+
+  &:hover {
+    fill: #81b3d2;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TABLET ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (min-width: 768px) {
   .main-footer {
@@ -80,9 +145,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
 
-@media (min-width: 768px) {
   .main-footer__tag {
     font-family: "PTSans", "Arial", sans-serif;
     font-style: normal;
@@ -92,9 +155,7 @@
     margin: auto;
     padding: 0;
   }
-}
 
-@media (min-width: 768px) {
   .main-footer__social-list {
     list-style: none;
     display: flex;
@@ -102,17 +163,13 @@
     padding: 0;
     margin: auto;
   }
-}
 
-@media (min-width: 768px) {
   .main-footer__copyright {
     display: flex;
     justify-content: center;
     padding: 0;
   }
-}
 
-@media (min-width: 768px) {
   .copyright__text {
     margin: auto 0;
     font-family: "PTSans", "Arial", sans-serif;
@@ -121,14 +178,16 @@
     font-size: 14px;
     line-height: 26px;
   }
-}
 
-@media (min-width: 768px) {
   .copyright__link {
     margin: auto 0 auto 5px;
     padding: 0;
   }
 }
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DESCTOP ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (min-width: 1200px) {
   .main-footer {
@@ -142,9 +201,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
 
-@media (min-width: 1200px) {
   .main-footer__tag {
     font-family: "PTSans", "Arial", sans-serif;
     font-style: normal;
@@ -154,9 +211,7 @@
     margin: auto;
     padding: 0;
   }
-}
 
-@media (min-width: 1200px) {
   .main-footer__social-list {
     list-style: none;
     display: flex;
@@ -164,17 +219,13 @@
     padding: 0;
     margin: auto;
   }
-}
 
-@media (min-width: 1200px) {
   .main-footer__copyright {
     display: flex;
     justify-content: center;
     padding: 0;
   }
-}
 
-@media (min-width: 1200px) {
   .copyright__text {
     margin: auto 0;
     font-family: "PTSans", "Arial", sans-serif;
@@ -183,9 +234,7 @@
     font-size: 14px;
     line-height: 26px;
   }
-}
 
-@media (min-width: 1200px) {
   .copyright__link {
     margin: auto 0 auto 5px;
     padding: 0;
