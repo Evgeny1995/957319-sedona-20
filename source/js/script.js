@@ -10,7 +10,6 @@ navMenu.addEventListener('click',function(){
 });
 
 menu__close.addEventListener('click',function(){
-  console.log("i am here");
 if (list.classList.contains('menu__open')){
     list.classList.remove ('menu__open');
     list.classList.add ('list-navigation');}

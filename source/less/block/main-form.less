@@ -7,7 +7,7 @@ body {
   width: 320px;
   margin: 0 auto;
   background: url("./../../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   padding: 158px 0 1px 0;
   background-position: -224px -231px;
   text-align: center;
@@ -52,6 +52,7 @@ body {
   line-height: 24px;
   padding: 0 0 20px 0;
   margin: 20px 0 0 0;
+  text-transform: uppercase;
 }
 
 .form__wrap {
@@ -61,8 +62,8 @@ body {
 }
 
 .form__introduce {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid @bg-gray-1;
+  border-bottom: 1px solid @bg-gray-1;
 }
 
 .introduce__title {
@@ -93,17 +94,17 @@ body {
   font-size: 18px;
   line-height: 26px;
   border: none;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   outline: none;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-white-1;
+    border: 2px solid @bg-foc-grey-1;
     height: 54px;
     width: 215px;
   }
@@ -128,17 +129,17 @@ body {
   font-size: 18px;
   line-height: 26px;
   border: none;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   outline: none;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-white-1;
+    border: 2px solid @bg-foc-grey-1;
     height: 54px;
     width: 178px;
   }
@@ -163,24 +164,24 @@ body {
   font-size: 18px;
   line-height: 26px;
   border: none;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   outline: none;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-white-1;
+    border: 2px solid @bg-foc-grey-1;
     height: 54px;
     width: 178px;
   }
 }
 
 .form__сontact {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @bg-gray-1;
   margin: 0;
 }
 
@@ -196,10 +197,10 @@ body {
   &::after {
     content: "";
     position: absolute;
-    background-color: #e6e6e6;
+    background-color: @bg-grey-4;
     width: 58px;
     height: 58px;
-    top: 85.5px;
+    top: 87px;
     right: 20px;
     z-index: 2;
   }
@@ -218,7 +219,7 @@ body {
   position: absolute;
   width: 18px;
   height: 18px;
-  fill: #010101;
+  fill: @bg-black-3;
   top: 57px;
   right: -78px;
   z-index: 3;
@@ -231,8 +232,8 @@ body {
   font-size: 18px;
   line-height: 26px;
   border: none;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   outline: none;
   height: 58px;
   padding: 0 0 0 15px;
@@ -240,12 +241,12 @@ body {
   width: 207px;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-white-1;
+    border: 2px solid @bg-foc-grey-1;
     height: 54px;
   }
 }
@@ -261,10 +262,10 @@ body {
   &::after {
     content: "";
     position: absolute;
-    background-color: #e6e6e6;
+    background-color: @bg-grey-4;
     width: 58px;
     height: 58px;
-    top: 37.5px;
+    top: 37px;
     right: -105px;
     z-index: 2;
   }
@@ -274,7 +275,7 @@ body {
   position: absolute;
   width: 16px;
   height: 12px;
-  fill: #000000;
+  fill: @bg-black;
   z-index: 3;
   top: 60px;
   right: -84px;
@@ -288,8 +289,8 @@ body {
   font-size: 18px;
   line-height: 26px;
   border: none;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   outline: none;
   width: 207px;
   height: 58px;
@@ -297,18 +298,18 @@ body {
   margin: 15px 58px 25px 0;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-foc-white-1;
+    border: 2px solid @bg-foc-grey-1;
     height: 54px;
   }
 }
 
 .form__impression {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @bg-gray-1;
 }
 
 .impression__title {
@@ -406,7 +407,7 @@ body {
 
 .form__attractions {
   margin: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @bg-gray-1;
   padding: 0;
 }
 
@@ -518,8 +519,8 @@ body {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  background-color: #f2f2f2;
-  color: #000000;
+  background-color: @bg-gray-2;
+  color: @text-col-black;
   max-width: 236px;
   max-height: 160px;
   padding: 20px;
@@ -528,12 +529,12 @@ body {
   resize: none;
 
   &:hover {
-    background-color: #e5e5e5;
+    background-color: @bg-hov-grey-1;
   }
 
   &:focus {
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    background-color: @bg-foc-white-1;
+    border: 2px solid @bg-foc-grey-1;
     max-width: 232px;
     max-height: 156px;
   }
@@ -547,14 +548,14 @@ body {
   line-height: 26px;
   width: 280px;
   height: 58px;
-  background-color: #81b3d2;
-  color: #ffffff;
+  background-color: @bg-blue-3;
+  color: @text-col-white;
   margin: 0 auto 40px auto;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @text-hov-blue-2;
   }
 }
 
@@ -584,7 +585,7 @@ body {
     width: 768px;
     margin: 0 auto;
     background: url("./../../img/bg-back-tablet@1x.jpg") no-repeat;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     padding: 290px 0 1px 0;
     background-position: 0 -228px;
     text-align: center;
@@ -655,7 +656,7 @@ body {
     grid-column-end: 2;
     position: static;
     order: 0;
-    border-right: 0.5px solid #dbdbdb;
+    border-right: 0.5px solid @bg-grey-5;
     text-align: left;
     border-bottom: none;
   }
@@ -793,17 +794,17 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       height: 54px;
       width: 212px;
     }
@@ -835,10 +836,10 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-color: #e6e6e6;
+      background-color: @bg-grey-4;
       width: 58px;
       height: 58px;
-      top: 101px;
+      top: 102px;
       right: 0;
       z-index: 2;
     }
@@ -855,7 +856,7 @@ body {
       height: 1px;
       top: 22px;
       right: 524px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -865,7 +866,7 @@ body {
       height: 1px;
       top: 22px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -884,7 +885,7 @@ body {
     position: absolute;
     width: 18px;
     height: 18px;
-    fill: #010101;
+    fill: @bg-black-3;
     top: 66px;
     right: 19px;
     z-index: 3;
@@ -897,8 +898,8 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
     height: 58px;
     padding: 0 0 0 15px;
@@ -919,7 +920,7 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-color: #e6e6e6;
+      background-color: @bg-grey-4;
       width: 58px;
       height: 58px;
       top: 46px;
@@ -932,7 +933,7 @@ body {
     position: absolute;
     width: 16px;
     height: 12px;
-    fill: #000000;
+    fill: @bg-black;
     z-index: 3;
     top: 68px;
     right: 21px;
@@ -946,8 +947,8 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
     height: 58px;
     padding: 0 0 0 15px;
@@ -989,7 +990,7 @@ body {
       height: 1px;
       top: -49px;
       right: 524px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -999,7 +1000,7 @@ body {
       height: 1px;
       top: -49px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -1060,7 +1061,7 @@ body {
       height: 1px;
       top: 12px;
       right: 524px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -1070,7 +1071,7 @@ body {
       height: 1px;
       top: 12px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -1080,8 +1081,8 @@ body {
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     max-width: 648px;
     max-height: 120px;
     padding: 20px;
@@ -1091,12 +1092,12 @@ body {
     width: 100%;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       max-width: 642px;
       max-height: 116px;
     }
@@ -1110,8 +1111,8 @@ body {
     line-height: 26px;
     width: 280px;
     height: 58px;
-    background-color: #81b3d2;
-    color: #ffffff;
+    background-color: @bg-blue-3;
+    color: @text-col-white;
     margin: 0;
     outline: none;
     border: none;
@@ -1139,7 +1140,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     background: url("./../../img/bg-back-deckstop@1x.jpg") no-repeat;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     padding: 301px 0 1px 0;
     background-position: 0 -56px;
     text-align: center;
@@ -1210,7 +1211,7 @@ body {
     grid-column-end: 2;
     position: static;
     order: 0;
-    border-right: 0.5px solid #dbdbdb;
+    border-right: 0.5px solid @bg-grey-5;
     border-bottom: none;
   }
 
@@ -1346,17 +1347,17 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       width: 346px;
       height: 54px;
     }
@@ -1381,17 +1382,17 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       width: 308px;
       height: 54px;
     }
@@ -1416,17 +1417,17 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       width: 310px;
       height: 54px;
     }
@@ -1458,10 +1459,10 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-color: #e6e6e6;
+      background-color: @bg-grey-4;
       width: 58px;
       height: 58px;
-      top: 95px;
+      top: 96px;
       left: 346px;
       z-index: 2;
     }
@@ -1478,7 +1479,7 @@ body {
       height: 1px;
       top: 22px;
       right: 679px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -1488,7 +1489,7 @@ body {
       height: 1px;
       top: 22px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -1508,7 +1509,7 @@ body {
     position: absolute;
     width: 18px;
     height: 18px;
-    fill: #010101;
+    fill: @bg-black-3;
     top: 4px;
     right: -309px;
     z-index: 3;
@@ -1525,8 +1526,8 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
     height: 58px;
     padding: 0 0 0 15px;
@@ -1534,12 +1535,12 @@ body {
     width: 242px;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       width: 238px;
       height: 54px;
     }
@@ -1558,7 +1559,7 @@ body {
     &::after {
       content: "";
       position: absolute;
-      background-color: #e6e6e6;
+      background-color: @bg-grey-4;
       width: 58px;
       height: 58px;
       top: -16px;
@@ -1571,7 +1572,7 @@ body {
     position: absolute;
     width: 16px;
     height: 12px;
-    fill: #000000;
+    fill: @bg-black;
     z-index: 3;
     top: 7px;
     right: -305px;
@@ -1585,8 +1586,8 @@ body {
     font-size: 18px;
     line-height: 26px;
     border: none;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     outline: none;
     height: 58px;
     padding: 0 0 0 15px;
@@ -1594,12 +1595,12 @@ body {
     width: 243px;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       width: 239px;
       height: 54px;
     }
@@ -1639,7 +1640,7 @@ body {
       height: 1px;
       top: -50px;
       right: 680px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -1649,7 +1650,7 @@ body {
       height: 1px;
       top: -50px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -1710,7 +1711,7 @@ body {
       height: 1px;
       top: 12px;
       right: 680px;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
 
     &::after {
@@ -1720,7 +1721,7 @@ body {
       height: 1px;
       top: 12px;
       right: 0;
-      background: #dbdbdb;
+      background: @bg-grey-5;
     }
   }
 
@@ -1730,8 +1731,8 @@ body {
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-    background-color: #f2f2f2;
-    color: #000000;
+    background-color: @bg-gray-2;
+    color: @text-col-black;
     max-width: 960px;
     max-height: 120px;
     padding: 20px;
@@ -1741,12 +1742,12 @@ body {
     width: 100%;
 
     &:hover {
-      background-color: #e5e5e5;
+      background-color: @bg-hov-grey-1;
     }
 
     &:focus {
-      background-color: #ffffff;
-      border: 2px solid #e5e5e5;
+      background-color: @bg-foc-white-1;
+      border: 2px solid @bg-foc-grey-1;
       max-width: 956px;
       max-height: 116px;
     }
@@ -1760,8 +1761,8 @@ body {
     line-height: 26px;
     width: 280px;
     height: 58px;
-    background-color: #81b3d2;
-    color: #ffffff;
+    background-color: @bg-blue-3;
+    color: @text-col-white;
     margin: 0;
     outline: none;
     border: none;

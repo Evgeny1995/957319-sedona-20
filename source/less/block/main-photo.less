@@ -7,7 +7,7 @@ body {
   width: 320px;
   margin: 0 auto;
   background: url("./../../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   padding: 158px 0 1px 0;
   background-position: -224px -231px;
   text-align: center;
@@ -52,11 +52,12 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto 37px auto;
+  text-transform: uppercase;
 }
 
 .view-list {
   list-style: none;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @bg-gray-1;
   padding: 0;
   margin: 0;
 }
@@ -70,7 +71,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @bg-gray-1;
 }
 
 .view-list__title {
@@ -94,14 +95,14 @@ body {
   width: 23px;
   height: 21px;
   border: none;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   position: relative;
 }
 
 .view-list__btn-like {
   width: 23px;
   height: 21px;
-  fill: #000000;
+  fill: @bg-black;
   opacity: 0.3;
   position: absolute;
   top: 31px;
@@ -147,7 +148,8 @@ body {
   line-height: 26px;
   padding: 0;
   margin: 30px auto;
-  color: #000000;
+  color: @text-col-black;
+  text-transform: uppercase;
 }
 
 .video__description {
@@ -157,7 +159,8 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto 30px auto;
-  color: #000000;
+  color: @text-col-black;
+  text-transform: uppercase;
 }
 
 .video__player {
@@ -171,7 +174,7 @@ body {
   position: absolute;
   width: 280px;
   height: 66px;
-  background-color: #f2f2f2;
+  background-color: @bg-gray-2;
   top: 359px;
   left: 20px;
 
@@ -180,7 +183,7 @@ body {
     position: absolute;
     width: 280px;
     height: 45px;
-    background-color: #000000;
+    background-color: @text-col-black;
     opacity: 0.6;
     top: -45px;
     left: 0;
@@ -191,7 +194,7 @@ body {
     position: absolute;
     width: 235px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     opacity: 0.3;
     top: -25px;
     left: 23px;
@@ -202,7 +205,7 @@ body {
   position: absolute;
   top: -30px;
   left: 60px;
-  fill: #ffffff;
+  fill: @bg-white-1;
   width: 13px;
   height: 13px;
 }
@@ -211,12 +214,12 @@ body {
   position: absolute;
   top: 21px;
   left: 23px;
-  fill: #5c6870;
+  fill: @bg-blue-5;
   width: 16px;
   height: 20px;
 
   &:hover {
-    fill: #333333;
+    fill: @bg-black-2;
   }
 }
 
@@ -224,12 +227,12 @@ body {
   position: absolute;
   top: 21px;
   right: 75px;
-  fill: #5c6870;
+  fill: @bg-blue-5;
   width: 30px;
   height: 20px;
 
   &:hover {
-    fill: #333333;
+    fill: @bg-black-2;
   }
 }
 
@@ -237,12 +240,12 @@ body {
   position: absolute;
   top: 21px;
   right: 23px;
-  fill: #5c6870;
+  fill: @bg-blue-5;
   width: 20px;
   height: 20px;
 
   &:hover {
-    fill: #333333;
+    fill: @bg-black-2;
   }
 }
 
@@ -260,7 +263,7 @@ body {
     width: 768px;
     margin: 0 auto;
     background: url("./../../img/bg-back-tablet@1x.jpg") no-repeat;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     padding: 310px 0 1px 0;
     background-position: 0 -228px;
     text-align: center;
@@ -332,7 +335,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     border-bottom: none;
-    background-color: #f2f2f2;
+    background-color: @bg-gray-2;
     position: relative;
   }
 
@@ -342,7 +345,7 @@ body {
   }
 
   .view-list__item:nth-child(3) {
-    background-color: #eaeaea;
+    background-color: @bg-gray-3;
   }
 
   .view-list__title {
@@ -372,7 +375,7 @@ body {
     width: 23px;
     height: 21px;
     border: none;
-    background-color: #f2f2f2;
+    background-color: @bg-gray-2;
     top: 300px;
     left: 240px;
     position: absolute;
@@ -391,7 +394,7 @@ body {
   .view-list__btn-like {
     width: 23px;
     height: 21px;
-    fill: #000000;
+    fill: @bg-black;
     opacity: 0.3;
     position: absolute;
     top: 0;
@@ -402,7 +405,7 @@ body {
     width: 23px;
     height: 21px;
     border: none;
-    background-color: #f2f2f2;
+    background-color: @bg-gray-2;
     top: 435px;
     left: 564px;
     position: absolute;
@@ -421,7 +424,7 @@ body {
   .view-list__item:nth-child(1) .view-list__btn-like {
     width: 23px;
     height: 21px;
-    fill: #000000;
+    fill: @bg-black;
     opacity: 0.3;
     position: absolute;
     top: 0;
@@ -429,7 +432,7 @@ body {
   }
 
   .view-list__item:nth-child(3) .view-list__btn {
-    background-color: #eaeaea;
+    background-color: @bg-gray-3;
   }
 
   .view-list__picture-vastness {
@@ -471,7 +474,7 @@ body {
     line-height: 26px;
     padding: 0;
     margin: 0 auto 20px auto;
-    color: #000000;
+    color: @text-col-black;
   }
 
   .video__description {
@@ -481,7 +484,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     margin: 0 auto 40px auto;
-    color: #000000;
+    color: @text-col-black;
     width: 70%;
   }
 
@@ -508,7 +511,7 @@ body {
       content: "";
       width: 389px;
       height: 3px;
-      background-color: #ffffff;
+      background-color: @bg-white-1;
       opacity: 0.2;
       top: 44px;
       left: 95px;
@@ -519,7 +522,7 @@ body {
     position: absolute;
     top: 39px;
     left: 202px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 13px;
     height: 13px;
     opacity: 1;
@@ -529,13 +532,13 @@ body {
     position: absolute;
     top: 35px;
     left: 33px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 16px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 
@@ -543,13 +546,13 @@ body {
     position: absolute;
     top: 35px;
     right: 97px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 30px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 
@@ -557,13 +560,13 @@ body {
     position: absolute;
     top: 35px;
     right: 40px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 20px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 }
@@ -582,7 +585,7 @@ body {
     width: 1200px;
     margin: 0 auto;
     background: url("./../../img/bg-back-desktop@1x.jpg") no-repeat;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     padding: 321px 0 1px 0;
     background-position: 0 -217px;
     text-align: center;
@@ -655,7 +658,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     border-bottom: none;
-    background-color: #ffffff;
+    background-color: @bg-white-1;
     position: relative;
   }
 
@@ -684,7 +687,7 @@ body {
   }
 
   .view-list__item:nth-child(3) {
-    background-color: #ffffff;
+    background-color: @bg-white-1;
   }
 
   .view-list__title {
@@ -694,7 +697,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     position: absolute;
-    color: #ffffff;
+    color: @text-col-white;
     bottom: 36px;
     left: 0;
   }
@@ -706,7 +709,7 @@ body {
 
   .view-list__author-photo {
     position: absolute;
-    color: #ffffff;
+    color: @text-col-white;
     font-family: "PTSans", "Arial", sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -737,7 +740,7 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 24px;
-    color: #ffffff;
+    color: @text-col-white;
     bottom: 28px;
     right: 30px;
     margin: 0;
@@ -747,7 +750,7 @@ body {
   .view-list__btn-like {
     width: 23px;
     height: 21px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     opacity: 1;
     position: absolute;
     top: 0;
@@ -771,7 +774,7 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 24px;
-    color: #ffffff;
+    color: @text-col-white;
     bottom: 28px;
     left: 1116px;
     margin: 0;
@@ -781,7 +784,7 @@ body {
   .view-list__item:nth-child(1) .view-list__btn-like {
     width: 23px;
     height: 21px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     opacity: 1;
     position: absolute;
     top: 0;
@@ -831,7 +834,7 @@ body {
     line-height: 26px;
     padding: 0;
     margin: 0 auto 20px auto;
-    color: #000000;
+    color: @text-col-black;
   }
 
   .video__description {
@@ -841,7 +844,7 @@ body {
     font-size: 14px;
     line-height: 24px;
     margin: 0 auto 40px auto;
-    color: #000000;
+    color: @text-col-black;
     width: 70%;
   }
 
@@ -868,7 +871,7 @@ body {
       content: "";
       width: 540px;
       height: 3px;
-      background-color: #ffffff;
+      background-color: @bg-white-1;
       opacity: 0.2;
       top: 44px;
       left: 95px;
@@ -879,7 +882,7 @@ body {
     position: absolute;
     top: 39px;
     left: 202px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 13px;
     height: 13px;
     opacity: 1;
@@ -889,13 +892,13 @@ body {
     position: absolute;
     top: 35px;
     left: 33px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 16px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 
@@ -903,13 +906,13 @@ body {
     position: absolute;
     top: 35px;
     right: 97px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 30px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 
@@ -917,13 +920,13 @@ body {
     position: absolute;
     top: 35px;
     right: 40px;
-    fill: #ffffff;
+    fill: @bg-white-1;
     width: 20px;
     height: 20px;
 
     &:hover {
       opacity: 0.6;
-      fill: #ffffff;
+      fill: @text-hov-white-1;
     }
   }
 }

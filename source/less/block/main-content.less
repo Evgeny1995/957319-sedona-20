@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 5px 0;
   background: url("./../../img/bg-back-mobile@1x.jpg") no-repeat top center;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
 
   &::before {
     content: "";
@@ -43,7 +43,8 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
+  color: @text-col-black;
+  text-transform: uppercase;
 }
 
 .advantages__description {
@@ -55,10 +56,11 @@
   font-size: 14px;
   line-height: 26px;
   width: 90%;
+  text-transform: uppercase;
 }
 
 .advantages__true-town {
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   margin-top: 50px;
 }
 
@@ -67,7 +69,7 @@
   position: relative;
   padding: 1px 0 0 0;
   text-align: center;
-  background-color: #81b3d2;
+  background-color: @bg-blue-3;
 
   &::before {
     content: "";
@@ -88,8 +90,9 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #ffffff;
+  color: @text-col-white;
   margin-top: 20px;
+  text-transform: uppercase;
 }
 
 .true-town__number {
@@ -98,7 +101,7 @@
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #ffffff;
+  color: @text-col-white;
   margin: 20px 0;
 }
 
@@ -108,9 +111,10 @@
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #ffffff;
+  color: @text-col-white;
   margin: 20px 0;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .true-town-picture {
@@ -150,6 +154,7 @@
   line-height: 21px;
   margin: 0;
   width: 87%;
+  text-transform: uppercase;
 }
 
 .true-town-list__description br {
@@ -161,7 +166,7 @@
 }
 
 .true-town-list__icon-house {
-  fill: #81b3d2;
+  fill: @bg-blue-3;
   width: 39px;
   height: 37px;
   position: absolute;
@@ -174,7 +179,7 @@
 }
 
 .true-town-list__icon-souvenirs {
-  fill: #81b3d2;
+  fill: @bg-blue-3;
   width: 32px;
   height: 38px;
   position: absolute;
@@ -187,7 +192,7 @@
 }
 
 .true-town-list__icon-food {
-  fill: #81b3d2;
+  fill: @bg-blue-3;
   width: 40px;
   height: 35px;
   position: absolute;
@@ -196,13 +201,13 @@
 }
 
 .advantages__devil-bridge {
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   margin-top: 40px;
 }
 
 .devil-bridge__background-blue {
-  background-color: #81b3d2;
-  color: #ffffff;
+  background-color: @bg-blue-3;
+  color: @text-col-white;
   height: 466px;
   text-align: center;
   box-sizing: border-box;
@@ -246,7 +251,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #eeeeee;
+  background-color: @bg-white-2;
 }
 
 .advantages-list__item {
@@ -292,12 +297,13 @@
   line-height: 21px;
   margin: 0 auto;
   width: 96%;
+  text-transform: uppercase;
 }
 
 .main-page__hotels {
   padding: 25px 0 0 0;
   text-align: center;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   position: relative;
 }
 
@@ -307,7 +313,7 @@
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  color: #333333;
+  color: @text-col-black-2;
   margin: 0;
   padding: 0;
 }
@@ -318,10 +324,11 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: #333333;
+  color: @text-col-black-2;
   margin: 20px auto;
   padding: 0;
   width: 90%;
+  text-transform: uppercase;
 }
 
 .hotels__description br {
@@ -336,14 +343,14 @@
   line-height: 26px;
   width: 280px;
   height: 58px;
-  background-color: #81b3d2;
-  color: #ffffff;
+  background-color: @bg-blue-3;
+  color: @text-col-white;
   margin: 0 auto 40px auto;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: #669ec0;
+    background-color: @bg-blue-4;
   }
 }
 
@@ -526,7 +533,7 @@
   }
 
   .true-town-list__icon-house {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 75px;
     height: 72px;
     position: absolute;
@@ -535,7 +542,7 @@
   }
 
   .true-town-list__icon-food {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 76px;
     height: 67.9px;
     position: absolute;
@@ -544,7 +551,7 @@
   }
 
   .true-town-list__icon-souvenirs {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 64px;
     height: 75px;
     position: absolute;
@@ -557,8 +564,8 @@
     grid-template-columns: 1fr 2fr;
     height: 256px;
     padding: 0;
-    background-color: #81b3d2;
-    color: #ffffff;
+    background-color: @bg-blue-3;
+    color: @text-col-white;
     text-align: center;
   }
 
@@ -850,7 +857,7 @@
   }
 
   .true-town-list__icon-house {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 75px;
     height: 73px;
     position: absolute;
@@ -859,7 +866,7 @@
   }
 
   .true-town-list__icon-food {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 77px;
     height: 69px;
     position: absolute;
@@ -868,7 +875,7 @@
   }
 
   .true-town-list__icon-souvenirs {
-    fill: #81b3d2;
+    fill: @bg-blue-3;
     width: 63px;
     height: 75.5px;
     position: absolute;
@@ -881,8 +888,8 @@
     grid-template-columns: 1fr 2fr;
     height: 256px;
     padding: 0;
-    background-color: #81b3d2;
-    color: #ffffff;
+    background-color: @bg-blue-3;
+    color: @text-col-white;
     text-align: center;
   }
 
