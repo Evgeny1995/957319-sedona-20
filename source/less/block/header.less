@@ -6,7 +6,7 @@
 .page-header__wrap {
   width: 320px;
   min-height: 260px;
-  background-color: #ffffff;
+  background-color: @bg-white-1;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -17,47 +17,65 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  min-height: 56px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: nowrap;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  text-transform: uppercase;
+}
+
+.list-navigation {
+  display: none;
+}
+
+.menu__open {
+  display: flex;
 }
 
 .list-navigation__item {
   display: flex;
   justify-content: center;
-  background-color: #81b3d2;
+  background-color: @bg-blue-1;
   text-align: center;
-  border-bottom: 1px solid #6490ab;
+  border-bottom: 1px solid @bg-blue-2;
   margin: 0;
   padding: 0;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .list-navigation__links {
   padding: 5px 0;
   text-decoration: none;
-  color: #ffffff;
+  color: @text-col-white;
   font-family: "PTSans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.list-navigation__btn_wrap {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  top: 11px;
+  right: -95px;
+  background-color: @bg-blue-1;
+  border: none;
 }
 
 .list-navigation__btn_close {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("/img/icon-btn-menu-close.svg") no-repeat;
-    width: 23px;
-    height: 23px;
-    top: 13px;
-    left: 92px;
-  }
+  position: absolute;
+  fill: @text-col-white;
+  width: 22.2px;
+  height: 22.2px;
+  top: 0;
+  right: 0;
 }
 
 .page-header__logo {
@@ -68,11 +86,223 @@
   z-index: 1;
 }
 
+.logo {
+  border: none;
+}
+
 .page-heder__icon-menu {
   position: absolute;
-  background: url("/img/icon-menu-mobile.svg") no-repeat center center;
   top: 222px;
   right: 19px;
   width: 23px;
   height: 23px;
+  border: none;
+  outline-style: none;
+  background-color: @bg-white-1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-heder__menu-open {
+  fill: @bg-blue-1;
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TABLET ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 768px) {
+  .page-header {
+    width: 768px;
+    min-height: 56px;
+    margin: 0 auto;
+  }
+
+  .page-header__wrap {
+    width: 693px;
+    min-height: 56px;
+    background-color: @bg-white-1;
+    margin: 0 auto;
+    padding: 0 37.5px;
+  }
+
+  .page-header__list-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0));
+  }
+
+  .list-navigation__item {
+    background-color: @bg-white-1;
+    border: none;
+    box-shadow: none;
+    color: @text-col-black;
+    padding: 0;
+    margin: 16px auto;
+  }
+
+  .list-navigation__item:nth-child(1) {
+    margin: auto 81px auto 0;
+  }
+
+  .list-navigation__item:nth-child(2) {
+    margin: auto 23px auto 0;
+  }
+
+  .list-navigation__item:nth-child(4) {
+    margin: auto 0 auto 36px;
+  }
+
+  .list-navigation__item:nth-child(5) {
+    margin: auto 0 auto 39px;
+  }
+
+  .list-navigation__links {
+    background-color: bg-wrap-header;
+    color: @text-col-black;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      color: @text-hov-blue-1;
+    }
+  }
+
+  .list-navigation__btn_wrap {
+    display: none;
+  }
+
+  .list-navigation__btn_close {
+    display: none;
+  }
+
+  .page-heder__icon-menu {
+    display: none;
+  }
+
+  .page-heder__menu-open {
+    display: none;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 335px;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DESCKTOP ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 1200px) {
+  .page-header {
+    width: 1200px;
+    min-height: 56px;
+    margin: 0 auto;
+  }
+
+  .page-header__wrap {
+    width: 1040px;
+    min-height: 56px;
+    background-color: @bg-white-1;
+    margin: 0 auto;
+    padding: 0 37.5px;
+  }
+
+  .page-header__list-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr 1.4fr 1fr;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0));
+  }
+
+  .list-navigation__item {
+    background-color: @bg-white-1;
+    border: none;
+    box-shadow: none;
+    color: @text-col-black;
+    padding: 0;
+    margin: 16px auto;
+  }
+
+  .list-navigation__item:nth-child(1) {
+    margin: auto 149px auto 0;
+  }
+
+  .list-navigation__item:nth-child(2) {
+    margin: auto 94px auto 0;
+  }
+
+  .list-navigation__item:nth-child(4) {
+    margin: auto 0 auto 36px;
+  }
+
+  .list-navigation__item:nth-child(5) {
+    margin: auto 0 auto 76px;
+  }
+
+  .list-navigation__links {
+    background-color: @bg-white-1;
+    color: @text-col-black;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  .list-navigation__btn_wrap {
+    display: none;
+  }
+
+  .list-navigation__btn_close {
+    display: none;
+  }
+
+  .page-heder__icon-menu {
+    display: none;
+  }
+
+  .page-heder__menu-open {
+    display: none;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    width: 186.6px;
+    height: 96.43px;
+    top: 0;
+    left: 465px;
+  }
 }

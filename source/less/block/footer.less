@@ -1,11 +1,11 @@
 .main-footer {
   width: 320px;
   min-height: 233px;
-  background-color: #ffffff;
-  color: #000000;
-  margin: 0 auto;
+  background-color: @bg-white-1;
+  color: @text-col-black;
+  margin: 50px auto 0 auto;
   text-align: center;
-  padding: 40px 0 1px 0;
+  padding: 80px 0 1px 0;
 }
 
 .main-footer__tag {
@@ -32,18 +32,72 @@
 }
 
 .social-list__link-twitter {
-  padding: 15px 15px;
-  background-color: #81b3d2;
+  padding: 14px 15px 16px 15px;
+  background-color: @bg-blue-3;
+
+  &:hover {
+    background-color: @text-hov-blue-2;
+  }
+
+  &:active {
+    background-color: @text-act-blue-1;
+  }
+}
+
+.social-list__picture-twitter {
+  fill: @bg-white-1;
+  width: 17.5px;
+  height: 14.57px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__link-facebook {
   padding: 19px 19.5px 11px 19.5px;
-  background-color: #81b3d2;
+  background-color: @bg-blue-3;
+
+  &:hover {
+    background-color: @text-hov-blue-2;
+  }
+
+  &:active {
+    background-color: @text-act-blue-1;
+  }
+}
+
+.social-list__picture-facebook {
+  fill: @bg-white-1;
+  width: 9px;
+  height: 19px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__link-youtube {
-  padding: 14px 14px 16px 14px;
-  background-color: #81b3d2;
+  padding: 15px 14px 15px 14px;
+  background-color: @bg-blue-3;
+
+  &:hover {
+    background-color: @text-hov-blue-2;
+  }
+
+  &:active {
+    background-color: @text-act-blue-1;
+  }
+}
+
+.social-list__picture-youtube {
+  fill: @bg-white-1;
+  width: 20px;
+  height: 15px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-footer__copyright {
@@ -65,4 +119,124 @@
 .copyright__link {
   margin-bottom: 0;
   padding: 0;
+}
+
+.copyright__picture {
+  fill: @bg-black;
+
+  &:hover {
+    fill: @text-hov-blue-1;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TABLET ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 768px) {
+  .main-footer {
+    width: 768px;
+    min-height: 120px;
+    background-color: @bg-white-1;
+    color: @text-col-black;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-footer__tag {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .main-footer__social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+  }
+
+  .main-footer__copyright {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .copyright__text {
+    margin: auto 0;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .copyright__link {
+    margin: auto 0 auto 5px;
+    padding: 0;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DESCTOP ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 1200px) {
+  .main-footer {
+    width: 1200px;
+    min-height: 120px;
+    background-color: @bg-white-1;
+    color: @text-col-black;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-footer__tag {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .main-footer__social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+  }
+
+  .main-footer__copyright {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .copyright__text {
+    margin: auto 0;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .copyright__link {
+    margin: auto 0 auto 5px;
+    padding: 0;
+  }
 }

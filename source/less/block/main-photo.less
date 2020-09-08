@@ -6,8 +6,8 @@ body {
   position: relative;
   width: 320px;
   margin: 0 auto;
-  background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
-  background-color: #ffffff;
+  background: url("./../../img/bg-back-mobile@1x.jpg") no-repeat;
+  background-color: @bg-white-1;
   padding: 158px 0 1px 0;
   background-position: -224px -231px;
   text-align: center;
@@ -15,7 +15,8 @@ body {
   &::after {
     content: "";
     position: absolute;
-    background: url("/img/Export/SEDONA-signature-photo-bg.svg") no-repeat;
+    background: url("./../../img/Export/SEDONA-signature-photo-bg.svg")
+      no-repeat;
     width: 229px;
     height: 39px;
     top: 50px;
@@ -25,11 +26,12 @@ body {
   &::before {
     content: "";
     position: absolute;
-    background: url("/img/Export/mobile-triangle-bg-2.svg") no-repeat;
-    width: 320px;
+    background: url("./../../img/Export/mobile-triangle-bg-2.svg") no-repeat;
+    background-size: 325px 57px;
+    width: 325px;
     height: 57px;
     top: 113px;
-    right: 0;
+    right: -3px;
   }
 }
 
@@ -39,7 +41,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  margin: 37px 0 40px 0;
+  margin: 40px 0 40px 0;
 }
 
 .view__description {
@@ -50,11 +52,12 @@ body {
   font-size: 14px;
   line-height: 24px;
   margin: 0 auto 37px auto;
+  text-transform: uppercase;
 }
 
 .view-list {
   list-style: none;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid @bg-gray-1;
   padding: 0;
   margin: 0;
 }
@@ -68,7 +71,7 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 24px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid @bg-gray-1;
 }
 
 .view-list__title {
@@ -82,21 +85,28 @@ body {
   padding: 0;
 }
 
-.view-list__btn {
+.view-list__btn-out {
   font-weight: bold;
-  margin: 10px 20px 0 20px;
+  margin: 10px 20px 0 30px;
   padding: 0 0 10px 30px;
-  position: relative;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    background: url("/img/Export/like-icon.svg") no-repeat;
-    width: 23px;
-    height: 21px;
-    top: 0;
-    left: 0;
-  }
+.view-list__btn {
+  width: 23px;
+  height: 21px;
+  border: none;
+  background-color: @bg-white-1;
+  position: relative;
+}
+
+.view-list__btn-like {
+  width: 23px;
+  height: 21px;
+  fill: @bg-black;
+  opacity: 0.3;
+  position: absolute;
+  top: 31px;
+  left: 20px;
 }
 
 .view-list__picture-vastness {
@@ -125,8 +135,9 @@ body {
 
 .main-page__video {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
   text-align: center;
+  position: relative;
 }
 
 .video__title {
@@ -136,8 +147,9 @@ body {
   font-size: 18px;
   line-height: 26px;
   padding: 0;
-  margin: 30px 0;
-  color: #000000;
+  margin: 30px auto;
+  color: @text-col-black;
+  text-transform: uppercase;
 }
 
 .video__description {
@@ -146,8 +158,775 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  margin: 0 0 30px 0;
-  color: #000000;
+  margin: 0 auto 30px auto;
+  color: @text-col-black;
+  text-transform: uppercase;
 }
 
-// .video__player {
+.video__player {
+  width: 320px;
+  height: 201px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video__navigation {
+  position: absolute;
+  width: 280px;
+  height: 66px;
+  background-color: @bg-gray-2;
+  top: 359px;
+  left: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 45px;
+    background-color: @text-col-black;
+    opacity: 0.6;
+    top: -45px;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 235px;
+    height: 3px;
+    background-color: @bg-white-1;
+    opacity: 0.3;
+    top: -25px;
+    left: 23px;
+  }
+}
+
+.video__volume {
+  position: absolute;
+  top: -30px;
+  left: 60px;
+  fill: @bg-white-1;
+  width: 13px;
+  height: 13px;
+}
+
+.video__replay {
+  position: absolute;
+  top: 21px;
+  left: 23px;
+  fill: @bg-blue-5;
+  width: 16px;
+  height: 20px;
+
+  &:hover {
+    fill: @bg-black-2;
+  }
+}
+
+.video__subtitles {
+  position: absolute;
+  top: 21px;
+  right: 75px;
+  fill: @bg-blue-5;
+  width: 30px;
+  height: 20px;
+
+  &:hover {
+    fill: @bg-black-2;
+  }
+}
+
+.video__fullscreen {
+  position: absolute;
+  top: 21px;
+  right: 23px;
+  fill: @bg-blue-5;
+  width: 20px;
+  height: 20px;
+
+  &:hover {
+    fill: @bg-black-2;
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!TABLET ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 768px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .main-page__view {
+    position: relative;
+    width: 768px;
+    margin: 0 auto;
+    background: url("./../../img/bg-back-tablet@1x.jpg") no-repeat;
+    background-color: @bg-white-1;
+    padding: 310px 0 1px 0;
+    background-position: 0 -228px;
+    text-align: center;
+  }
+
+  .main-page__view::after {
+    content: "";
+    position: absolute;
+    background: url("./../../img/Export/SEDONA-signature-photo-bg.svg")
+      no-repeat;
+    width: 457px;
+    height: 78px;
+    background-size: 457px 78px;
+    top: 95px;
+    left: 158px;
+  }
+
+  .main-page__view::before {
+    content: "";
+    position: absolute;
+    background: url("./../../img/Export/tablet-white-triangle.svg") no-repeat;
+    background-size: 773px 57px;
+    width: 773px;
+    height: 57px;
+    top: 234px;
+    right: -3px;
+  }
+
+  .view__title {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 26px;
+    margin: 20px auto 20px auto;
+  }
+
+  .view__description {
+    width: 57%;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto 30px auto;
+  }
+
+  .view-list {
+    width: 648px;
+    list-style: none;
+    border-top: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .view-list__item {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    border-bottom: none;
+    background-color: @bg-gray-2;
+    position: relative;
+  }
+
+  .view-list__item:nth-child(1) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .view-list__item:nth-child(3) {
+    background-color: @bg-gray-3;
+  }
+
+  .view-list__title {
+    font-weight: bold;
+    margin: 10px 20px 5px 20px;
+    padding: 0;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    width: 64%;
+  }
+
+  .view-list__author-photo {
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    width: 66%;
+  }
+
+  .view-list__item:nth-child(1) .view-list__author-photo {
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    width: 79%;
+  }
+
+  .view-list__btn {
+    width: 23px;
+    height: 21px;
+    border: none;
+    background-color: @bg-gray-2;
+    top: 300px;
+    left: 240px;
+    position: absolute;
+  }
+
+  .view-list__btn-out {
+    position: absolute;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 10px;
+    width: 6%;
+    bottom: 13px;
+    right: 32px;
+  }
+
+  .view-list__btn-like {
+    width: 23px;
+    height: 21px;
+    fill: @bg-black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn {
+    width: 23px;
+    height: 21px;
+    border: none;
+    background-color: @bg-gray-2;
+    top: 435px;
+    left: 564px;
+    position: absolute;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn-out {
+    position: absolute;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 10px;
+    width: 6%;
+    bottom: 10px;
+    right: 13px;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn-like {
+    width: 23px;
+    height: 21px;
+    fill: @bg-black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(3) .view-list__btn {
+    background-color: @bg-gray-3;
+  }
+
+  .view-list__picture-vastness {
+    width: 648px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .view-list__picture-plants {
+    width: 324px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .view-list__picture-road {
+    width: 324px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .view-list__picture-bridge {
+    width: 324px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .main-page__video {
+    width: 648px;
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .video__title {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    color: @text-col-black;
+  }
+
+  .video__description {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto 40px auto;
+    color: @text-col-black;
+    width: 70%;
+  }
+
+  .video__player {
+    width: 648px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .video__navigation {
+    position: absolute;
+    width: 648px;
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 541px;
+    left: 20px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 389px;
+      height: 3px;
+      background-color: @bg-white-1;
+      opacity: 0.2;
+      top: 44px;
+      left: 95px;
+    }
+  }
+
+  .video__volume {
+    position: absolute;
+    top: 39px;
+    left: 202px;
+    fill: @bg-white-1;
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  .video__replay {
+    position: absolute;
+    top: 35px;
+    left: 33px;
+    fill: @bg-white-1;
+    width: 16px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+
+  .video__subtitles {
+    position: absolute;
+    top: 35px;
+    right: 97px;
+    fill: @bg-white-1;
+    width: 30px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+
+  .video__fullscreen {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    fill: @bg-white-1;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!DESCTOP ШИРИНА ЭКРАНА!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media (min-width: 1200px) {
+  body {
+    margin: 0 auto;
+  }
+
+  .main-page__view {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    background: url("./../../img/bg-back-desktop@1x.jpg") no-repeat;
+    background-color: @bg-white-1;
+    padding: 321px 0 1px 0;
+    background-position: 0 -217px;
+    text-align: center;
+  }
+
+  .main-page__view::after {
+    content: "";
+    position: absolute;
+    background: url("./../../img/Export/SEDONA-signature-photo-bg.svg")
+      no-repeat;
+    width: 460px;
+    height: 80px;
+    background-size: 460px 80px;
+    top: 103px;
+    left: 370px;
+  }
+
+  .main-page__view::before {
+    content: "";
+    position: absolute;
+    background: url("./../../img/Export/1200px/intro-triangle-deckstop.svg") no-repeat;
+    background-size: 1205px 57px;
+    width: 1205px;
+    height: 57px;
+    top: 246px;
+    right: -3px;
+  }
+
+  .view__title {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 26px;
+    margin: 20px auto 20px auto;
+  }
+
+  .view__description {
+    width: 37%;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto 30px auto;
+  }
+
+  .view-list {
+    width: 1200px;
+    list-style: none;
+    border-top: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .view-list__item {
+    width: 33.333333%;
+    height: 267px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    border-bottom: none;
+    background-color: @bg-white-1;
+    position: relative;
+  }
+
+  .view-list__item:nth-child(1) {
+    height: 400px;
+  }
+
+  .view-list__item::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    width: 1200px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(3) {
+    background-color: @bg-white-1;
+  }
+
+  .view-list__title {
+    font-weight: bold;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    position: absolute;
+    color: @text-col-white;
+    bottom: 36px;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(1) .view-list__title {
+    bottom: 36px;
+    left: 0;
+  }
+
+  .view-list__author-photo {
+    position: absolute;
+    color: @text-col-white;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    bottom: -3px;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(1) .view-list__author-photo {
+    bottom: -3px;
+    left: 0;
+  }
+
+  .view-list__btn {
+    width: 23px;
+    height: 21px;
+    border: none;
+    background-color: unset;
+    top: 213px;
+    left: 311px;
+    position: absolute;
+  }
+
+  .view-list__btn-out {
+    font-weight: bold;
+    position: absolute;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: @text-col-white;
+    bottom: 28px;
+    right: 30px;
+    margin: 0;
+    padding: 0 0 0 30px;
+  }
+
+  .view-list__btn-like {
+    width: 23px;
+    height: 21px;
+    fill: @bg-white-1;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn {
+    width: 23px;
+    height: 21px;
+    border: none;
+    background-color: unset;
+    top: 346px;
+    left: 1111px;
+    position: absolute;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn-out {
+    font-weight: bold;
+    position: absolute;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: @text-col-white;
+    bottom: 28px;
+    left: 1116px;
+    margin: 0;
+    padding: 0 0 0 30px;
+  }
+
+  .view-list__item:nth-child(1) .view-list__btn-like {
+    width: 23px;
+    height: 21px;
+    fill: @bg-white-1;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .view-list__item:nth-child(3) .view-list__btn {
+    background-color: unset;
+  }
+
+  .view-list__picture-vastness {
+    width: 1200px;
+    height: 400px;
+    margin: 0;
+  }
+
+  .view-list__picture-plants {
+    width: 400px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .view-list__picture-road {
+    width: 400px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .view-list__picture-bridge {
+    width: 400px;
+    height: 267px;
+    margin: 0;
+  }
+
+  .main-page__video {
+    width: 800px;
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .video__title {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    color: @text-col-black;
+  }
+
+  .video__description {
+    font-family: "PTSans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 auto 40px auto;
+    color: @text-col-black;
+    width: 70%;
+  }
+
+  .video__player {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .video__navigation {
+    position: absolute;
+    width: 800px;
+    height: 93px;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 541px;
+    left: 20px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 540px;
+      height: 3px;
+      background-color: @bg-white-1;
+      opacity: 0.2;
+      top: 44px;
+      left: 95px;
+    }
+  }
+
+  .video__volume {
+    position: absolute;
+    top: 39px;
+    left: 202px;
+    fill: @bg-white-1;
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  .video__replay {
+    position: absolute;
+    top: 35px;
+    left: 33px;
+    fill: @bg-white-1;
+    width: 16px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+
+  .video__subtitles {
+    position: absolute;
+    top: 35px;
+    right: 97px;
+    fill: @bg-white-1;
+    width: 30px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+
+  .video__fullscreen {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    fill: @bg-white-1;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+      opacity: 0.6;
+      fill: @text-hov-white-1;
+    }
+  }
+}
