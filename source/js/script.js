@@ -1,4 +1,4 @@
-var navMenu = document.querySelector('.page-heder__icon-menu');
+var navMenu = document.querySelector('.wrap__icon-menu');
 var list = document.querySelector(".page-header__list-navigation");
 var menu__open = document.querySelector(".menu__open");
 var menu__close = document.querySelector(".list-navigation__btn_close");
